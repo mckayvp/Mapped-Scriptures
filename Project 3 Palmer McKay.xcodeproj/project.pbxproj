@@ -22,6 +22,7 @@
 		E58929612193E3E100AD284C /* scripture.css in Resources */ = {isa = PBXBuildFile; fileRef = E58929582193E3E100AD284C /* scripture.css */; };
 		E58929622193E3E100AD284C /* Scripture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58929592193E3E100AD284C /* Scripture.swift */; };
 		E58929632193E3E100AD284C /* ScriptureRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589295A2193E3E100AD284C /* ScriptureRenderer.swift */; };
+		E58929662193E4E100AD284C /* VolumesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58929652193E4E100AD284C /* VolumesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E58929582193E3E100AD284C /* scripture.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = scripture.css; path = "Project 3 Palmer McKay/View/HTML/scripture.css"; sourceTree = SOURCE_ROOT; };
 		E58929592193E3E100AD284C /* Scripture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scripture.swift; path = "Project 3 Palmer McKay/Model/Scripture.swift"; sourceTree = SOURCE_ROOT; };
 		E589295A2193E3E100AD284C /* ScriptureRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScriptureRenderer.swift; path = "Project 3 Palmer McKay/View/HTML/ScriptureRenderer.swift"; sourceTree = SOURCE_ROOT; };
+		E58929652193E4E100AD284C /* VolumesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesViewController.swift; sourceTree = "<group>"; };
 		EC8E7C93022E9444664245AA /* Pods-Project 3 Palmer McKay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Palmer McKay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Palmer McKay/Pods-Project 3 Palmer McKay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			children = (
 				E589293B2193D7B200AD284C /* AppDelegate.swift */,
 				E589293D2193D7B200AD284C /* ViewController.swift */,
+				E58929652193E4E100AD284C /* VolumesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				E58929632193E3E100AD284C /* ScriptureRenderer.swift in Sources */,
 				E589293E2193D7B200AD284C /* ViewController.swift in Sources */,
 				E58929622193E3E100AD284C /* Scripture.swift in Sources */,
+				E58929662193E4E100AD284C /* VolumesViewController.swift in Sources */,
 				E58929602193E3E100AD284C /* GeoPlace.swift in Sources */,
 				E589295E2193E3E100AD284C /* Book.swift in Sources */,
 				E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */,
