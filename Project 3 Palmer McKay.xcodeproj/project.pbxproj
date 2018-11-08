@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EC6164D7F0F8D4D1C8E8BAF /* Pods_Project_3_Palmer_McKay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */; };
 		E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293B2193D7B200AD284C /* AppDelegate.swift */; };
 		E589293E2193D7B200AD284C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293D2193D7B200AD284C /* ViewController.swift */; };
 		E58929412193D7B200AD284C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E589293F2193D7B200AD284C /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C26C864DB9CF3790CAE25FB2 /* Pods-Project 3 Palmer McKay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Palmer McKay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Palmer McKay/Pods-Project 3 Palmer McKay.release.xcconfig"; sourceTree = "<group>"; };
+		CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3_Palmer_McKay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58929382193D7B200AD284C /* Project 3 Palmer McKay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3 Palmer McKay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E589293B2193D7B200AD284C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E589293D2193D7B200AD284C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		E58929422193D7B500AD284C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E58929452193D7B500AD284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E58929472193D7B500AD284C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8E7C93022E9444664245AA /* Pods-Project 3 Palmer McKay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Palmer McKay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Palmer McKay/Pods-Project 3 Palmer McKay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EC6164D7F0F8D4D1C8E8BAF /* Pods_Project_3_Palmer_McKay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C1644DB36D2735955673D975 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAE8E6A0EDA32C45225FAB7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E7C93022E9444664245AA /* Pods-Project 3 Palmer McKay.debug.xcconfig */,
+				C26C864DB9CF3790CAE25FB2 /* Pods-Project 3 Palmer McKay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E589292F2193D7B200AD284C = {
 			isa = PBXGroup;
 			children = (
 				E589293A2193D7B200AD284C /* Project 3 Palmer McKay */,
 				E58929392193D7B200AD284C /* Products */,
+				DAE8E6A0EDA32C45225FAB7D /* Pods */,
+				C1644DB36D2735955673D975 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E589294A2193D7B500AD284C /* Build configuration list for PBXNativeTarget "Project 3 Palmer McKay" */;
 			buildPhases = (
+				8A4AF97611095944041BD2FA /* [CP] Check Pods Manifest.lock */,
 				E58929342193D7B200AD284C /* Sources */,
 				E58929352193D7B200AD284C /* Frameworks */,
 				E58929362193D7B200AD284C /* Resources */,
+				00EDB694639C80DF837162EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +187,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00EDB694639C80DF837162EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Project 3 Palmer McKay/Pods-Project 3 Palmer McKay-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDB.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project 3 Palmer McKay/Pods-Project 3 Palmer McKay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A4AF97611095944041BD2FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project 3 Palmer McKay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E58929342193D7B200AD284C /* Sources */ = {
@@ -312,6 +385,7 @@
 		};
 		E589294B2193D7B500AD284C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC8E7C93022E9444664245AA /* Pods-Project 3 Palmer McKay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -329,6 +403,7 @@
 		};
 		E589294C2193D7B500AD284C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C26C864DB9CF3790CAE25FB2 /* Pods-Project 3 Palmer McKay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
