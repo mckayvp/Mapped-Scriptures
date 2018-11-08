@@ -14,9 +14,13 @@ class BooksViewController : UITableViewController {
 //        static let ShowBooksSegueIdentifier = "ShowBooks"
         static let BookCellIdentifier = "BookCell"
     }
-    var books = GeoDatabase.sharedGeoDatabase.booksForParentId(1)
+    var books = [Book]()
     var volume = ""
-    var volumeID = 1
+    var volumeID = 1 {
+        didSet {
+            books = GeoDatabase.sharedGeoDatabase.booksForParentId(volumeID)
+        }
+    }
     
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -30,7 +34,6 @@ class BooksViewController : UITableViewController {
         super.viewDidLoad()
         
         title = volume
-        books = GeoDatabase.sharedGeoDatabase.booksForParentId(volumeID)
     }
     
     // MARK: - Table View Data Source
