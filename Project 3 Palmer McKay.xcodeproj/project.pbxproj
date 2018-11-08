@@ -54,14 +54,46 @@
 		E589293A2193D7B200AD284C /* Project 3 Palmer McKay */ = {
 			isa = PBXGroup;
 			children = (
-				E589293B2193D7B200AD284C /* AppDelegate.swift */,
-				E589293D2193D7B200AD284C /* ViewController.swift */,
-				E589293F2193D7B200AD284C /* Main.storyboard */,
-				E58929422193D7B500AD284C /* Assets.xcassets */,
-				E58929442193D7B500AD284C /* LaunchScreen.storyboard */,
-				E58929472193D7B500AD284C /* Info.plist */,
+				E58929512193DE6900AD284C /* Model */,
+				E58929502193DE6100AD284C /* View */,
+				E589294F2193DE5300AD284C /* Controller */,
+				E589294D2193DE2A00AD284C /* Supporting Files */,
 			);
 			path = "Project 3 Palmer McKay";
+			sourceTree = "<group>";
+		};
+		E589294D2193DE2A00AD284C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E58929472193D7B500AD284C /* Info.plist */,
+				E58929422193D7B500AD284C /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E589294F2193DE5300AD284C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E589293B2193D7B200AD284C /* AppDelegate.swift */,
+				E589293D2193D7B200AD284C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E58929502193DE6100AD284C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E58929442193D7B500AD284C /* LaunchScreen.storyboard */,
+				E589293F2193D7B200AD284C /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E58929512193DE6900AD284C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
