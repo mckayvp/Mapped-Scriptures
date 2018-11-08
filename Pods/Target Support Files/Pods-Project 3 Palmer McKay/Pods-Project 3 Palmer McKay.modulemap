@@ -1,0 +1,6 @@
+framework module Pods_Project_3_Palmer_McKay {
+  umbrella header "Pods-Project 3 Palmer McKay-umbrella.h"
+
+  export *
+  module * { export * }
+}
