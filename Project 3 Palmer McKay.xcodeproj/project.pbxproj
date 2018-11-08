@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4EC6164D7F0F8D4D1C8E8BAF /* Pods_Project_3_Palmer_McKay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */; };
+		E51476F521948DA5002B6D1C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51476F421948DA5002B6D1C /* WebKit.framework */; };
+		E51476F721948E3E002B6D1C /* ScripturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51476F621948E3E002B6D1C /* ScripturesViewController.swift */; };
 		E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293B2193D7B200AD284C /* AppDelegate.swift */; };
 		E589293E2193D7B200AD284C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293D2193D7B200AD284C /* ViewController.swift */; };
 		E58929412193D7B200AD284C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E589293F2193D7B200AD284C /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		C26C864DB9CF3790CAE25FB2 /* Pods-Project 3 Palmer McKay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Palmer McKay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Palmer McKay/Pods-Project 3 Palmer McKay.release.xcconfig"; sourceTree = "<group>"; };
 		CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3_Palmer_McKay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E51476F421948DA5002B6D1C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E51476F621948E3E002B6D1C /* ScripturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScripturesViewController.swift; sourceTree = "<group>"; };
 		E58929382193D7B200AD284C /* Project 3 Palmer McKay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3 Palmer McKay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E589293B2193D7B200AD284C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E589293D2193D7B200AD284C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51476F521948DA5002B6D1C /* WebKit.framework in Frameworks */,
 				4EC6164D7F0F8D4D1C8E8BAF /* Pods_Project_3_Palmer_McKay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +70,7 @@
 		C1644DB36D2735955673D975 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E51476F421948DA5002B6D1C /* WebKit.framework */,
 				CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */,
 			);
 			name = Frameworks;
@@ -126,6 +132,7 @@
 				E589293D2193D7B200AD284C /* ViewController.swift */,
 				E58929652193E4E100AD284C /* VolumesViewController.swift */,
 				E58929672193E9D700AD284C /* BooksViewController.swift */,
+				E51476F621948E3E002B6D1C /* ScripturesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E589295D2193E3E100AD284C /* String+Extensions.swift in Sources */,
+				E51476F721948E3E002B6D1C /* ScripturesViewController.swift in Sources */,
 				E589295B2193E3E100AD284C /* GeoDatabase.swift in Sources */,
 				E58929632193E3E100AD284C /* ScriptureRenderer.swift in Sources */,
 				E589293E2193D7B200AD284C /* ViewController.swift in Sources */,

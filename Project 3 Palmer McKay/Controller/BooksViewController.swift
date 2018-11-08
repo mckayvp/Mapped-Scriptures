@@ -11,8 +11,8 @@ import UIKit
 class BooksViewController : UITableViewController {
     
     private struct Storyboard {
-//        static let ShowBooksSegueIdentifier = "ShowBooks"
         static let BookCellIdentifier = "BookCell"
+        static let ShowContentSegueIdentifier = "ShowChapterContent"
     }
     var books = [Book]()
     var volume = ""
@@ -51,5 +51,11 @@ class BooksViewController : UITableViewController {
         cell.textLabel?.text = books[indexPath.row].fullName
             
         return cell
+    }
+    
+    // Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Storyboard.ShowContentSegueIdentifier, sender: self)
     }
 }
