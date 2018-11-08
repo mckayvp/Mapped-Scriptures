@@ -13,6 +13,15 @@
 		E58929412193D7B200AD284C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E589293F2193D7B200AD284C /* Main.storyboard */; };
 		E58929432193D7B500AD284C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58929422193D7B500AD284C /* Assets.xcassets */; };
 		E58929462193D7B500AD284C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58929442193D7B500AD284C /* LaunchScreen.storyboard */; };
+		E589295B2193E3E100AD284C /* GeoDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58929522193E3E000AD284C /* GeoDatabase.swift */; };
+		E589295C2193E3E100AD284C /* geocode.js in Resources */ = {isa = PBXBuildFile; fileRef = E58929532193E3E000AD284C /* geocode.js */; };
+		E589295D2193E3E100AD284C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58929542193E3E000AD284C /* String+Extensions.swift */; };
+		E589295E2193E3E100AD284C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58929552193E3E000AD284C /* Book.swift */; };
+		E589295F2193E3E100AD284C /* geo.21.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E58929562193E3E000AD284C /* geo.21.sqlite */; };
+		E58929602193E3E100AD284C /* GeoPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58929572193E3E000AD284C /* GeoPlace.swift */; };
+		E58929612193E3E100AD284C /* scripture.css in Resources */ = {isa = PBXBuildFile; fileRef = E58929582193E3E100AD284C /* scripture.css */; };
+		E58929622193E3E100AD284C /* Scripture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58929592193E3E100AD284C /* Scripture.swift */; };
+		E58929632193E3E100AD284C /* ScriptureRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589295A2193E3E100AD284C /* ScriptureRenderer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		E58929422193D7B500AD284C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E58929452193D7B500AD284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E58929472193D7B500AD284C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E58929522193E3E000AD284C /* GeoDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeoDatabase.swift; path = "Project 3 Palmer McKay/Model/GeoDatabase.swift"; sourceTree = SOURCE_ROOT; };
+		E58929532193E3E000AD284C /* geocode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = geocode.js; path = "Project 3 Palmer McKay/View/HTML/geocode.js"; sourceTree = SOURCE_ROOT; };
+		E58929542193E3E000AD284C /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Project 3 Palmer McKay/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		E58929552193E3E000AD284C /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Book.swift; path = "Project 3 Palmer McKay/Model/Book.swift"; sourceTree = SOURCE_ROOT; };
+		E58929562193E3E000AD284C /* geo.21.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = geo.21.sqlite; path = "Project 3 Palmer McKay/geo.21.sqlite"; sourceTree = SOURCE_ROOT; };
+		E58929572193E3E000AD284C /* GeoPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeoPlace.swift; path = "Project 3 Palmer McKay/Model/GeoPlace.swift"; sourceTree = SOURCE_ROOT; };
+		E58929582193E3E100AD284C /* scripture.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = scripture.css; path = "Project 3 Palmer McKay/View/HTML/scripture.css"; sourceTree = SOURCE_ROOT; };
+		E58929592193E3E100AD284C /* Scripture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scripture.swift; path = "Project 3 Palmer McKay/Model/Scripture.swift"; sourceTree = SOURCE_ROOT; };
+		E589295A2193E3E100AD284C /* ScriptureRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScriptureRenderer.swift; path = "Project 3 Palmer McKay/View/HTML/ScriptureRenderer.swift"; sourceTree = SOURCE_ROOT; };
 		EC8E7C93022E9444664245AA /* Pods-Project 3 Palmer McKay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project 3 Palmer McKay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project 3 Palmer McKay/Pods-Project 3 Palmer McKay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,8 +107,10 @@
 		E589294D2193DE2A00AD284C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E58929562193E3E000AD284C /* geo.21.sqlite */,
 				E58929472193D7B500AD284C /* Info.plist */,
 				E58929422193D7B500AD284C /* Assets.xcassets */,
+				E58929542193E3E000AD284C /* String+Extensions.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -107,6 +127,7 @@
 		E58929502193DE6100AD284C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E58929642193E43A00AD284C /* HTML */,
 				E58929442193D7B500AD284C /* LaunchScreen.storyboard */,
 				E589293F2193D7B200AD284C /* Main.storyboard */,
 			);
@@ -116,8 +137,22 @@
 		E58929512193DE6900AD284C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E58929552193E3E000AD284C /* Book.swift */,
+				E58929522193E3E000AD284C /* GeoDatabase.swift */,
+				E58929572193E3E000AD284C /* GeoPlace.swift */,
+				E58929592193E3E100AD284C /* Scripture.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E58929642193E43A00AD284C /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				E58929532193E3E000AD284C /* geocode.js */,
+				E58929582193E3E100AD284C /* scripture.css */,
+				E589295A2193E3E100AD284C /* ScriptureRenderer.swift */,
+			);
+			path = HTML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E58929462193D7B500AD284C /* LaunchScreen.storyboard in Resources */,
+				E58929612193E3E100AD284C /* scripture.css in Resources */,
+				E589295F2193E3E100AD284C /* geo.21.sqlite in Resources */,
 				E58929432193D7B500AD284C /* Assets.xcassets in Resources */,
 				E58929412193D7B200AD284C /* Main.storyboard in Resources */,
+				E589295C2193E3E100AD284C /* geocode.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E589295D2193E3E100AD284C /* String+Extensions.swift in Sources */,
+				E589295B2193E3E100AD284C /* GeoDatabase.swift in Sources */,
+				E58929632193E3E100AD284C /* ScriptureRenderer.swift in Sources */,
 				E589293E2193D7B200AD284C /* ViewController.swift in Sources */,
+				E58929622193E3E100AD284C /* Scripture.swift in Sources */,
+				E58929602193E3E100AD284C /* GeoPlace.swift in Sources */,
+				E589295E2193E3E100AD284C /* Book.swift in Sources */,
 				E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
