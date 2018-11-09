@@ -10,17 +10,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="X4m-vA-h32">
             <objects>
                 <viewController id="JSq-FN-HA1" customClass="MapViewController" customModule="Project_3_Palmer_McKay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W5k-yt-VDm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xeg-9D-OEt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MaA-2r-qPW" firstAttribute="bottom" secondItem="Xeg-9D-OEt" secondAttribute="bottom" id="A91-Ct-DUW"/>
+                            <constraint firstItem="MaA-2r-qPW" firstAttribute="trailing" secondItem="Xeg-9D-OEt" secondAttribute="trailing" id="c91-Kt-QbY"/>
+                            <constraint firstItem="Xeg-9D-OEt" firstAttribute="top" secondItem="MaA-2r-qPW" secondAttribute="top" id="hPb-Nx-szZ"/>
+                            <constraint firstItem="Xeg-9D-OEt" firstAttribute="leading" secondItem="MaA-2r-qPW" secondAttribute="leading" id="toW-TH-eMl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MaA-2r-qPW"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZT2-GZ-QeE"/>
+                    <navigationItem key="navigationItem" title="Map" id="ZT2-GZ-QeE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeH-8k-xBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

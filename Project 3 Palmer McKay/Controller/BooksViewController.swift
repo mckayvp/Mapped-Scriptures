@@ -22,12 +22,6 @@ class BooksViewController : UITableViewController {
         }
     }
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//
-//    }
-    
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {

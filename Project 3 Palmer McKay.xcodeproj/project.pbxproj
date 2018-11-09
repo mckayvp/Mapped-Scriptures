@@ -11,6 +11,7 @@
 		E51476F521948DA5002B6D1C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51476F421948DA5002B6D1C /* WebKit.framework */; };
 		E51476F721948E3E002B6D1C /* ScripturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51476F621948E3E002B6D1C /* ScripturesViewController.swift */; };
 		E51476F921964565002B6D1C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51476F821964565002B6D1C /* MapViewController.swift */; };
+		E51476FB21964EC0002B6D1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51476FA21964EC0002B6D1C /* MapKit.framework */; };
 		E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293B2193D7B200AD284C /* AppDelegate.swift */; };
 		E58929412193D7B200AD284C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E589293F2193D7B200AD284C /* Main.storyboard */; };
 		E58929432193D7B500AD284C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58929422193D7B500AD284C /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		E51476F421948DA5002B6D1C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E51476F621948E3E002B6D1C /* ScripturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScripturesViewController.swift; sourceTree = "<group>"; };
 		E51476F821964565002B6D1C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E51476FA21964EC0002B6D1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E58929382193D7B200AD284C /* Project 3 Palmer McKay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3 Palmer McKay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E589293B2193D7B200AD284C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E58929402193D7B200AD284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51476FB21964EC0002B6D1C /* MapKit.framework in Frameworks */,
 				E51476F521948DA5002B6D1C /* WebKit.framework in Frameworks */,
 				4EC6164D7F0F8D4D1C8E8BAF /* Pods_Project_3_Palmer_McKay.framework in Frameworks */,
 			);
@@ -70,6 +73,7 @@
 		C1644DB36D2735955673D975 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E51476FA21964EC0002B6D1C /* MapKit.framework */,
 				E51476F421948DA5002B6D1C /* WebKit.framework */,
 				CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */,
 			);

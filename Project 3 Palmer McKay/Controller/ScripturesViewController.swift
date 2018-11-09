@@ -14,6 +14,8 @@ class ScripturesViewController : UIViewController {
     var bookID = 101
     var chapter = 2
     
+    private weak var mapViewController: MapViewController?
+    
     @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
@@ -23,5 +25,15 @@ class ScripturesViewController : UIViewController {
         webView.loadHTMLString(html, baseURL: nil)
         
         print(geoplaces)
+    }
+    
+    private func configureDetailViewController() {
+        if let splitVC = splitViewController { //if in split view controller
+            if let navVC = splitVC.viewControllers.last as? UINavigationController {
+                mapViewController = navVC.topViewController as? MapViewController
+            }
+        } else {
+            mapViewController = nil
+        }
     }
 }
