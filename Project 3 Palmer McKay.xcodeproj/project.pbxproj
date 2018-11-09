@@ -10,8 +10,8 @@
 		4EC6164D7F0F8D4D1C8E8BAF /* Pods_Project_3_Palmer_McKay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */; };
 		E51476F521948DA5002B6D1C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51476F421948DA5002B6D1C /* WebKit.framework */; };
 		E51476F721948E3E002B6D1C /* ScripturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51476F621948E3E002B6D1C /* ScripturesViewController.swift */; };
+		E51476F921964565002B6D1C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51476F821964565002B6D1C /* MapViewController.swift */; };
 		E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293B2193D7B200AD284C /* AppDelegate.swift */; };
-		E589293E2193D7B200AD284C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293D2193D7B200AD284C /* ViewController.swift */; };
 		E58929412193D7B200AD284C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E589293F2193D7B200AD284C /* Main.storyboard */; };
 		E58929432193D7B500AD284C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58929422193D7B500AD284C /* Assets.xcassets */; };
 		E58929462193D7B500AD284C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58929442193D7B500AD284C /* LaunchScreen.storyboard */; };
@@ -33,9 +33,9 @@
 		CAD367B768642C08F249662D /* Pods_Project_3_Palmer_McKay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_3_Palmer_McKay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51476F421948DA5002B6D1C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E51476F621948E3E002B6D1C /* ScripturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScripturesViewController.swift; sourceTree = "<group>"; };
+		E51476F821964565002B6D1C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E58929382193D7B200AD284C /* Project 3 Palmer McKay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3 Palmer McKay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E589293B2193D7B200AD284C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E589293D2193D7B200AD284C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E58929402193D7B200AD284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E58929422193D7B500AD284C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E58929452193D7B500AD284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -129,10 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				E589293B2193D7B200AD284C /* AppDelegate.swift */,
-				E589293D2193D7B200AD284C /* ViewController.swift */,
 				E58929652193E4E100AD284C /* VolumesViewController.swift */,
 				E58929672193E9D700AD284C /* BooksViewController.swift */,
 				E51476F621948E3E002B6D1C /* ScripturesViewController.swift */,
+				E51476F821964565002B6D1C /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,11 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51476F921964565002B6D1C /* MapViewController.swift in Sources */,
 				E589295D2193E3E100AD284C /* String+Extensions.swift in Sources */,
 				E51476F721948E3E002B6D1C /* ScripturesViewController.swift in Sources */,
 				E589295B2193E3E100AD284C /* GeoDatabase.swift in Sources */,
 				E58929632193E3E100AD284C /* ScriptureRenderer.swift in Sources */,
-				E589293E2193D7B200AD284C /* ViewController.swift in Sources */,
 				E58929622193E3E100AD284C /* Scripture.swift in Sources */,
 				E58929682193E9D700AD284C /* BooksViewController.swift in Sources */,
 				E58929662193E4E100AD284C /* VolumesViewController.swift in Sources */,

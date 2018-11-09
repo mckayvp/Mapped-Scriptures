@@ -11,9 +11,9 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
     
-    private struct StoryBoard {
+    private struct Storyboard {
         static let DetailVCIdentifier = "DetailVC"
-        static let MainStoryBoardName = "Main"
+        static let MainStoryboardName = "Main"
     }
 
     var window: UIWindow?
@@ -30,25 +30,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return true
     }
 
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+    
+    func splitViewController(_ splitViewController: UISplitViewController,
+                             collapseSecondary secondaryViewController: UIViewController,
+                             onto primaryViewController: UIViewController) -> Bool {
         return true
     }
+
     
-//    func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
-//
-//        if let navVC = primaryViewController as? UINavigationBar {
-//            for controller in navVC.viewControllers {
-//                if controller.restorationIdentifier == Storyboard.DetailVCIdentifier {
-//                    return controller
-//                }
-//            }
-//        }
-//
-//        let storyboard = UIStoryboard(name: storyboard.MainStoryboardName, bundle: nil)
-//        let detailView = storyboard.instantiateViewController(withIdentifier:
-//            StoryBoard.DetailVCIdentifier)
-//    
-//          return detailView
-//    }
+    func splitViewController(_ splitViewController: UISplitViewController,
+                             separateSecondaryFrom primaryViewController:
+                             UIViewController) -> UIViewController? {
+        
+        if let navVC = primaryViewController as? UINavigationController {
+            for controller in navVC.viewControllers {
+                if controller.restorationIdentifier == Storyboard.DetailVCIdentifier {
+                    return controller
+                }
+            }
+        }
+        let storyboard = UIStoryboard(name: Storyboard.MainStoryboardName, bundle: nil)
+        let detailView = storyboard.instantiateViewController(withIdentifier: Storyboard.DetailVCIdentifier)
+        
+        return detailView
+    }
+    
 }
 

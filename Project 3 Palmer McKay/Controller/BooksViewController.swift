@@ -53,7 +53,7 @@ class BooksViewController : UITableViewController {
         return cell
     }
     
-    // Delegate
+    // MARK: - Tabele View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Storyboard.ShowContentSegueIdentifier, sender: self)
