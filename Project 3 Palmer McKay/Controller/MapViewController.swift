@@ -46,6 +46,24 @@ class MapViewController : UIViewController, MKMapViewDelegate {
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(40.2506, -111.65247),
+                                 fromEyeCoordinate: CLLocationCoordinate2DMake(40.2306, -111.65247),
+                                 eyeAltitude: 500)
+        
+        mapView.setCamera(camera, animated: true)
+        
+        // set map view by region 
+//        let center = CLLocationCoordinate2DMake(40.2506, -111.65247)
+//        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+//
+//        let viewRegion = MKCoordinateRegion(center: center, span: span)
+//
+//        mapView.setRegion(viewRegion, animated: true)
+    }
+    
     // MARK: - Map View Delegate
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
