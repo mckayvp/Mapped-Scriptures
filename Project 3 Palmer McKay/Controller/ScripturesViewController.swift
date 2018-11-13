@@ -14,6 +14,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK: - Properties
     var bookID = 101
     var chapter = 2
+    // mapConfiguration class with all geoplaces, pass with prepareForSegue
     
     // MARK: - Private Properties
     

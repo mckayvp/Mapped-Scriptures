@@ -165,6 +165,7 @@ class GeoDatabase {
     func volumes() -> [String] {
         // NEEDSWORK: replace this with code to read the volume titles from the database
 
+        // select * from books where parentID is null 
         return ["Old Testament", "New Testament", "Book of Mormon",
                 "Doctrine and Covenants", "Pearl of Great Price"]
     }

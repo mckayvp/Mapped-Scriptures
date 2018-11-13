@@ -43,6 +43,8 @@ class MapViewController : UIViewController, MKMapViewDelegate {
         annotation.subtitle = "BYU Campus"
         
         mapView.addAnnotation(annotation)
+        
+
     }
     
     
@@ -62,6 +64,8 @@ class MapViewController : UIViewController, MKMapViewDelegate {
 //        let viewRegion = MKCoordinateRegion(center: center, span: span)
 //
 //        mapView.setRegion(viewRegion, animated: true)
+        
+        mapView.showAnnotations(mapView.annotations, animated: true) //Show all annotations from viewDidLoad in rectangular view
     }
     
     // MARK: - Map View Delegate
