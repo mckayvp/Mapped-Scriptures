@@ -12,6 +12,7 @@
 		E51476F721948E3E002B6D1C /* ScripturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51476F621948E3E002B6D1C /* ScripturesViewController.swift */; };
 		E51476F921964565002B6D1C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51476F821964565002B6D1C /* MapViewController.swift */; };
 		E51476FB21964EC0002B6D1C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51476FA21964EC0002B6D1C /* MapKit.framework */; };
+		E51493AA219B4F4B005705D4 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51493A9219B4F4B005705D4 /* ChaptersViewController.swift */; };
 		E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E589293B2193D7B200AD284C /* AppDelegate.swift */; };
 		E58929412193D7B200AD284C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E589293F2193D7B200AD284C /* Main.storyboard */; };
 		E58929432193D7B500AD284C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58929422193D7B500AD284C /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		E51476F621948E3E002B6D1C /* ScripturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScripturesViewController.swift; sourceTree = "<group>"; };
 		E51476F821964565002B6D1C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		E51476FA21964EC0002B6D1C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E51493A9219B4F4B005705D4 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		E58929382193D7B200AD284C /* Project 3 Palmer McKay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3 Palmer McKay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E589293B2193D7B200AD284C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E58929402193D7B200AD284C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				E58929672193E9D700AD284C /* BooksViewController.swift */,
 				E51476F621948E3E002B6D1C /* ScripturesViewController.swift */,
 				E51476F821964565002B6D1C /* MapViewController.swift */,
+				E51493A9219B4F4B005705D4 /* ChaptersViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				E58929622193E3E100AD284C /* Scripture.swift in Sources */,
 				E58929682193E9D700AD284C /* BooksViewController.swift in Sources */,
 				E58929662193E4E100AD284C /* VolumesViewController.swift in Sources */,
+				E51493AA219B4F4B005705D4 /* ChaptersViewController.swift in Sources */,
 				E58929602193E3E100AD284C /* GeoPlace.swift in Sources */,
 				E589295E2193E3E100AD284C /* Book.swift in Sources */,
 				E589293C2193D7B200AD284C /* AppDelegate.swift in Sources */,

@@ -35,6 +35,8 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        title = "\(chapter)"
         configureDetailViewController()
         
         let (html, geoplaces) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookID, chapter: chapter)

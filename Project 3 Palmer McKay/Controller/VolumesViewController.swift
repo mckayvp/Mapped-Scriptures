@@ -18,6 +18,7 @@ class VolumesViewController : UITableViewController {
     
     // MARK: - Segues
     
+    // talk to BooksViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Communicate the model over to its destination view controller
         if segue.identifier == Storyboard.ShowBooksSegueIdentifier {
@@ -50,6 +51,7 @@ class VolumesViewController : UITableViewController {
     // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         performSegue(withIdentifier: Storyboard.ShowBooksSegueIdentifier,
                      sender: indexPath)
     }

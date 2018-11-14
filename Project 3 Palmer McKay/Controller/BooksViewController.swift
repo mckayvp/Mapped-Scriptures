@@ -12,6 +12,7 @@ class BooksViewController : UITableViewController {
     
     private struct Storyboard {
         static let BookCellIdentifier = "BookCell"
+        static let ShowChaptersSegueIdentifier = "ShowChapterList"
         static let ShowContentSegueIdentifier = "ShowChapterContent"
     }
     var books = [Book]()
@@ -24,17 +25,32 @@ class BooksViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("yo")
+        print(volume)
+        print(volumeID)
         updateModel()
         title = volume
     }
     
     // MARK: - Segues
     
+    // talk to ChaptersViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scripturesVC = segue.destination as? ScripturesViewController  {
-            if let indexPath = sender as? IndexPath {
-                scripturesVC.bookID = books[indexPath.row].id
-                scripturesVC.chapter = 7
+        // Communicate the model over to its destination view controller
+        if segue.identifier == Storyboard.ShowChaptersSegueIdentifier {
+            if let chaptersVC = segue.destination as? ChaptersViewController {
+                if let indexPath = sender as? IndexPath {
+                    chaptersVC.bookID = books[indexPath.row].id
+                    chaptersVC.backName = books[indexPath.row].backName
+                }
+            }
+        }
+        else if segue.identifier == Storyboard.ShowContentSegueIdentifier {
+            if let scripturesVC = segue.destination as? ScripturesViewController {
+                if let indexPath = sender as? IndexPath {
+                    scripturesVC.bookID = books[indexPath.row].id
+                    scripturesVC.chapter = books[indexPath.row].numChapters ?? 0
+                }
             }
         }
     }
@@ -56,11 +72,18 @@ class BooksViewController : UITableViewController {
         return cell
     }
     
-    // MARK: - Tabele View Delegate
+    // MARK: - Table View Delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Storyboard.ShowContentSegueIdentifier, sender: indexPath)
+
+        if indexPath.row < 2 { // go straight to content 
+            performSegue(withIdentifier: Storyboard.ShowContentSegueIdentifier, sender: indexPath)
+        } else {
+            performSegue(withIdentifier: Storyboard.ShowChaptersSegueIdentifier, sender: indexPath)
+        }
+        
     }
+    
     
     // MARK: - Helpers
     
