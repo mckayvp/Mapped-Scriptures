@@ -163,10 +163,23 @@ class GeoDatabase {
     // Return an array of strings listing the titles of all scripture volumes.
     //
     func volumes() -> [String] {
-        // NEEDSWORK: replace this with code to read the volume titles from the database
+        do {
+            let books = try dbQueue.inDatabase { (db: Database) -> [String] in
+                var books = [String]()
 
-        // select * from books where parentID is null 
-        return ["Old Testament", "New Testament", "Book of Mormon",
-                "Doctrine and Covenants", "Pearl of Great Price"]
+                let rows = try Row.fetchCursor(db,
+                                               "select * from \(Book.databaseTableName) " +
+                    "where \(Book.parentBookId) is null order by \(Book.id)")
+                while let row = try rows.next() {
+                    books.append(Book(row: row).fullName)
+                }
+
+                return books
+            }
+
+            return books
+        } catch {
+            return []
+        }
     }
 }
