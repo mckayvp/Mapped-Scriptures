@@ -15,6 +15,7 @@ class VolumesViewController : UITableViewController {
         static let VolumeCellIdentifier = "VolumeCell"
     }
     var volumes = GeoDatabase.sharedGeoDatabase.volumes()
+    var books = [Book]()
     
     
     // MARK: - Segues
@@ -27,6 +28,7 @@ class VolumesViewController : UITableViewController {
                 if let indexPath = sender as? IndexPath {
                     booksVC.volume = volumes[indexPath.row]
                     booksVC.volumeID = indexPath.row + 1
+                    booksVC.volumeAbbr = GeoDatabase.sharedGeoDatabase.bookForId(indexPath.row + 1).gridName
                 }
             }
         }

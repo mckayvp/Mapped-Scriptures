@@ -17,6 +17,7 @@ class BooksViewController : UITableViewController {
     }
     var books = [Book]()
     var volume = ""
+    var volumeAbbr = ""
     var volumeID = 1
     var numChapters = 0
     
@@ -88,7 +89,7 @@ class BooksViewController : UITableViewController {
     // MARK: - Helpers
     
     private func updateModel() {
-        title = volume
+        title = volumeAbbr
         books = GeoDatabase.sharedGeoDatabase.booksForParentId(volumeID)
     }
 }

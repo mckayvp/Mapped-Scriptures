@@ -35,7 +35,7 @@ class ChaptersViewController : UITableViewController {
         if let scripturesVC = segue.destination as? ScripturesViewController  {
             if let indexPath = sender as? IndexPath {
                 scripturesVC.bookID = book.id
-                scripturesVC.backName = book.citeAbbr
+                scripturesVC.backName = book.backName
                 scripturesVC.chapter = indexPath.row + 1
             }
         }
