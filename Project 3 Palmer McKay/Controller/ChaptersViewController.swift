@@ -19,14 +19,13 @@ class ChaptersViewController : UITableViewController {
     var bookID = 101
     var scriptures = [Scripture]()
     var backName = ""
+    var chapter = "Chapter"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = backName
         updateModel()
-        
     }
     
     // MARK: - Segues
@@ -36,6 +35,7 @@ class ChaptersViewController : UITableViewController {
         if let scripturesVC = segue.destination as? ScripturesViewController  {
             if let indexPath = sender as? IndexPath {
                 scripturesVC.bookID = book.id
+                scripturesVC.backName = book.citeAbbr
                 scripturesVC.chapter = indexPath.row + 1
             }
         }
@@ -53,7 +53,8 @@ class ChaptersViewController : UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: Storyboard.ChapterCellIdentifier,
                                                      for: indexPath)
 
-            cell.textLabel?.text = "\(indexPath.row + 1)"
+            if(book.parentBookId == 4) {chapter = "Section"}
+            cell.textLabel?.text = "\(chapter) \(indexPath.row + 1)"
 
             return cell
     }

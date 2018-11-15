@@ -14,6 +14,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK: - Properties
     var bookID = 101
     var chapter = 2
+    var backName = ""
     // mapConfiguration class with all geoplaces, pass with prepareForSegue
     
     // MARK: - Private Properties
@@ -35,8 +36,11 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        title = "\(chapter)"
+        if (chapter < 1) {
+            title = "\(backName)"
+        } else {
+            title = "\(backName) \(chapter)"
+        }
         configureDetailViewController()
         
         let (html, geoplaces) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookID, chapter: chapter)
@@ -86,4 +90,5 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
             mapViewController = nil
         }
     }
+    
 }

@@ -18,6 +18,7 @@ class BooksViewController : UITableViewController {
     var books = [Book]()
     var volume = ""
     var volumeID = 1
+    var numChapters = 0
     
     
     // MARK: - View Controller Lifecycle
@@ -25,11 +26,7 @@ class BooksViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("yo")
-        print(volume)
-        print(volumeID)
         updateModel()
-        title = volume
     }
     
     // MARK: - Segues
@@ -42,6 +39,7 @@ class BooksViewController : UITableViewController {
                 if let indexPath = sender as? IndexPath {
                     chaptersVC.bookID = books[indexPath.row].id
                     chaptersVC.backName = books[indexPath.row].backName
+                    
                 }
             }
         }
@@ -50,6 +48,7 @@ class BooksViewController : UITableViewController {
                 if let indexPath = sender as? IndexPath {
                     scripturesVC.bookID = books[indexPath.row].id
                     scripturesVC.chapter = books[indexPath.row].numChapters ?? 0
+                    scripturesVC.backName = books[indexPath.row].backName
                 }
             }
         }
@@ -76,7 +75,8 @@ class BooksViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        if indexPath.row < 2 { // go straight to content 
+        numChapters = books[indexPath.row].numChapters ?? 0
+        if numChapters < 2 { // go straight to content
             performSegue(withIdentifier: Storyboard.ShowContentSegueIdentifier, sender: indexPath)
         } else {
             performSegue(withIdentifier: Storyboard.ShowChaptersSegueIdentifier, sender: indexPath)
