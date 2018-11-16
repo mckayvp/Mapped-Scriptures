@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3g4-2X-m6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="308"/>
+            <point key="canvasLocation" x="2364" y="307.1964017991005"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tif-pd-Pj5">
