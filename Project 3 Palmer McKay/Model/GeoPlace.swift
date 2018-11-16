@@ -31,7 +31,7 @@ struct GeoCategory : TableRecord, FetchableRecord {
     }
 }
 
-struct GeoPlace : TableRecord, FetchableRecord {
+struct GeoPlace : TableRecord, FetchableRecord, Hashable {
     enum GeoFlag: String {
         // Flags indicate different levels of certainty in the Open Bible database
         case None = "",
