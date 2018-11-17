@@ -15,7 +15,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     var bookID = 101
     var chapter = 2
     var backName = ""
-    var mapplaces = [GeoPlace]()
+    var mapPlaces = [GeoPlace]()
     // mapConfiguration class with all geoplaces, pass with prepareForSegue
     var map = Map()
     
@@ -73,9 +73,11 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
                     // NEEDSWORK: focus on geoplaceID
                     if let mapVC = mapViewController {
                         print("------mapVC------")
-                        mapplaces.append(GeoDatabase.sharedGeoDatabase.geoPlaceForId(geoplaceId)!)
-                        mapVC.configureMap(mapplaces)
+                        mapPlaces.removeAll()
+                        mapPlaces.append(GeoDatabase.sharedGeoDatabase.geoPlaceForId(geoplaceId)!)
+                        mapVC.configureMap(mapPlaces)
                         print("scrips calling mapConfiguration")
+                        print(mapPlaces)
                     }
                     print("Focusing on geoplace \(geoplaceId)")
 

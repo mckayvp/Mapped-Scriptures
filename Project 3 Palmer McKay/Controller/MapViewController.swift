@@ -114,7 +114,10 @@ class MapViewController : UIViewController, MKMapViewDelegate {
         print("*******geoplacesArray********")
         print(geoplacesArray)
         // Move map to pin(s)
-        if (uniquePlaces.count == 1) { // Just one pin
+        if (uniquePlaces.count < 1) {
+            // nothing to do with the map
+        }
+        else if (uniquePlaces.count == 1) { // Just one pin
             print("_____ONE PIN_____")
             let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(geoplacesArray[0].latitude,
                                                                                  geoplacesArray[0].longitude),
