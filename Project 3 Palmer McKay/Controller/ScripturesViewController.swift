@@ -26,11 +26,18 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK: - Outlets
     
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var mapButton: UIBarButtonItem!
     
     // MARK: - View Controller Lifecycles
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        if (Map.sharedConfig.hasMapButton) {
+            mapButton.title = "Map"
+        } else {
+            mapButton.title = ""
+        }
         
         configureDetailViewController()
     }

@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func splitViewController(_ splitViewController: UISplitViewController,
                              collapseSecondary secondaryViewController: UIViewController,
                              onto primaryViewController: UIViewController) -> Bool {
+        Map.sharedConfig.hasMapButton = true
         return true //show master view instead of detail view
     }
 
@@ -41,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func splitViewController(_ splitViewController: UISplitViewController,
                              separateSecondaryFrom primaryViewController:
                              UIViewController) -> UIViewController? {
-        
+        Map.sharedConfig.hasMapButton = false 
         if let navVC = primaryViewController as? UINavigationController {
             for controller in navVC.viewControllers {
                 if controller.restorationIdentifier == Storyboard.DetailVCIdentifier {

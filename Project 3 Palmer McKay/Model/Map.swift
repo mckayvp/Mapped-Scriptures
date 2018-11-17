@@ -11,4 +11,9 @@ import Foundation
 
 class Map {
     
+    // MARK: - Singleton
+    static let sharedConfig = Map()
+    
+    // MARK: - Properties
+    var hasMapButton = false 
 }
