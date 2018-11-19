@@ -19,6 +19,7 @@ class MapViewController : UIViewController, MKMapViewDelegate {
     }
     
     var geoplacesArray = [GeoPlace]()
+//    var book = Book()
     
     // MARK: - Outlets
     @IBOutlet weak var mapView: MKMapView!
@@ -28,6 +29,7 @@ class MapViewController : UIViewController, MKMapViewDelegate {
     // MARK: - View Controller Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         if let splitVC = splitViewController {
             navigationItem.leftItemsSupplementBackButton = true
@@ -89,10 +91,11 @@ class MapViewController : UIViewController, MKMapViewDelegate {
     
     // MARK: - Helpers
     
-    func configureMap(_ geoplaces: [GeoPlace]) {
+    func configureMap(_ geoplaces: [GeoPlace], _ mapTitle: String) {
         // Remove previous annotations, if any
         let allAnnotations = self.mapView.annotations
         self.mapView.removeAnnotations(allAnnotations)
+        geoplacesArray.removeAll()
         print("configureMap: \(geoplaces.count)")
         // https://www.hackingwithswift.com/example-code/language/how-to-remove-duplicate-items-from-an-array
         let uniquePlaces = geoplaces.removingDuplicates()
@@ -116,9 +119,11 @@ class MapViewController : UIViewController, MKMapViewDelegate {
         // Move map to pin(s)
         if (uniquePlaces.count < 1) {
             // nothing to do with the map
+            title = mapTitle
         }
         else if (uniquePlaces.count == 1) { // Just one pin
             print("_____ONE PIN_____")
+            title = geoplacesArray[0].placename
             let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(geoplacesArray[0].latitude,
                                                                                  geoplacesArray[0].longitude),
                                      fromEyeCoordinate: CLLocationCoordinate2DMake(geoplacesArray[0].viewLatitude,
@@ -130,6 +135,7 @@ class MapViewController : UIViewController, MKMapViewDelegate {
             print("_____MULTIPLE PINS_____")
             print(uniquePlaces.count)
             print(geoplacesArray)
+            title = mapTitle
                     let center = CLLocationCoordinate2DMake(geoplacesArray[0].latitude,
                                                             geoplacesArray[0].longitude)
                     let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)

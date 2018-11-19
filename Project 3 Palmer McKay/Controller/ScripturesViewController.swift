@@ -15,6 +15,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     var bookID = 101
     var chapter = 2
     var backName = ""
+    var titleString = ""
     var mapPlaces = [GeoPlace]()
     // mapConfiguration class with all geoplaces, pass with prepareForSegue
     var map = Map()
@@ -46,17 +47,21 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         if (chapter < 1) {
-            title = "\(backName)"
+            titleString = "\(backName)"
+            title = titleString
         } else {
-            title = "\(backName) \(chapter)"
+            titleString = "\(backName) \(chapter)"
+            title = titleString
         }
         configureDetailViewController()
+        
         
         let (html, geoplaces) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookID, chapter: chapter)
         
         if let mapVC = mapViewController {
             print("mapVC")
-            mapVC.configureMap(geoplaces)
+            print(geoplaces)
+            mapVC.configureMap(geoplaces, titleString)
         }
         
         webView.navigationDelegate = self
@@ -82,7 +87,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
                         print("------mapVC------")
                         mapPlaces.removeAll()
                         mapPlaces.append(GeoDatabase.sharedGeoDatabase.geoPlaceForId(geoplaceId)!)
-                        mapVC.configureMap(mapPlaces)
+                        mapVC.configureMap(mapPlaces, titleString)
                         print("scrips calling mapConfiguration")
                         print(mapPlaces)
                     }
