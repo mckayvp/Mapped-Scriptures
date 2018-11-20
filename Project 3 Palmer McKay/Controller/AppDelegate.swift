@@ -35,7 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                              collapseSecondary secondaryViewController: UIViewController,
                              onto primaryViewController: UIViewController) -> Bool {
         Map.sharedConfig.hasMapButton = true
-        return true //show master view instead of detail view
+        // true shows master view instead of detail view
+        return true
     }
 
     
@@ -52,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
         let storyboard = UIStoryboard(name: Storyboard.MainStoryboardName, bundle: nil)
         let detailView = storyboard.instantiateViewController(withIdentifier: Storyboard.DetailVCIdentifier)
-        
+        Map.sharedConfig.showMap = false
         return detailView
     }
     

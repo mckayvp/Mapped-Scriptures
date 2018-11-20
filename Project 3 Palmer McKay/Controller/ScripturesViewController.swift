@@ -15,9 +15,8 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     var bookID = 101
     var chapter = 2
     var backName = ""
-    var titleString = ""
+    var mapTitle = ""
     var mapPlaces = [GeoPlace]()
-    // mapConfiguration class with all geoplaces, pass with prepareForSegue
     var map = Map()
     
     // MARK: - Private Properties
@@ -28,6 +27,13 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var mapButton: UIBarButtonItem!
+    
+    // MARK: - Actions
+    
+    @IBAction func showMap(_ sender: UIBarButtonItem) {
+        print("SHOW MAP")
+        Map.sharedConfig.showMap = true
+    }
     
     // MARK: - View Controller Lifecycles
     
@@ -47,11 +53,11 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
         
         if (chapter < 1) {
-            titleString = "\(backName)"
-            title = titleString
+            mapTitle = "\(backName)"
+            title = mapTitle
         } else {
-            titleString = "\(backName) \(chapter)"
-            title = titleString
+            mapTitle = "\(backName) \(chapter)"
+            title = mapTitle
         }
         configureDetailViewController()
         
@@ -59,16 +65,11 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         let (html, geoplaces) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookID, chapter: chapter)
         
         if let mapVC = mapViewController {
-            print("mapVC")
-            print(geoplaces)
-            mapVC.configureMap(geoplaces, titleString)
+            mapVC.configureMap(geoplaces, mapTitle, false)
         }
         
         webView.navigationDelegate = self
         webView.loadHTMLString(html, baseURL: nil)
-        
-        print("-------geoplaces--------")
-        print(geoplaces)
     }
     
     // MARK: - Navigation Delegate
@@ -84,17 +85,13 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
                 if let geoplaceId = Int(path.substring(fromOffset: baseUrl.count)) {
                     // NEEDSWORK: focus on geoplaceID
                     if let mapVC = mapViewController {
-                        print("------mapVC------")
                         mapPlaces.removeAll()
                         mapPlaces.append(GeoDatabase.sharedGeoDatabase.geoPlaceForId(geoplaceId)!)
-                        mapVC.configureMap(mapPlaces, titleString)
-                        print("scrips calling mapConfiguration")
-                        print(mapPlaces)
+                        mapTitle = mapPlaces[0].placename
+                        mapVC.configureMap(mapPlaces, mapTitle, true)
                     }
-                    print("Focusing on geoplace \(geoplaceId)")
-
-                    
                 }
+                
                 if mapViewController == nil {
                     print("There is no map view controller")
                 } else {

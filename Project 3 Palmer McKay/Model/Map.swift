@@ -15,5 +15,6 @@ class Map {
     static let sharedConfig = Map()
     
     // MARK: - Properties
-    var hasMapButton = false 
+    var hasMapButton = false
+    var showMap = true
 }

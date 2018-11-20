@@ -194,7 +194,11 @@
                         <viewLayoutGuide key="safeArea" id="4C2-AV-GM6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Cnh-qz-Yp2">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="fnP-dJ-6xg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="fnP-dJ-6xg">
+                            <connections>
+                                <action selector="showMap:" destination="3f6-BT-TrO" id="IBm-Om-I0k"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapButton" destination="fnP-dJ-6xg" id="VSS-0w-jhg"/>
