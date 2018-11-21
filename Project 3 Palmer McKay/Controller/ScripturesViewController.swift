@@ -31,7 +31,6 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK: - Actions
     
     @IBAction func showMap(_ sender: UIBarButtonItem) {
-        print("SHOW MAP")
         Map.sharedConfig.showMap = true
     }
     
@@ -83,19 +82,13 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
             
             if path.hasPrefix(baseUrl) {
                 if let geoplaceId = Int(path.substring(fromOffset: baseUrl.count)) {
-                    // NEEDSWORK: focus on geoplaceID
+                    // focus on geoplaceID
                     if let mapVC = mapViewController {
                         mapPlaces.removeAll()
                         mapPlaces.append(GeoDatabase.sharedGeoDatabase.geoPlaceForId(geoplaceId)!)
                         mapTitle = mapPlaces[0].placename
                         mapVC.configureMap(mapPlaces, mapTitle, true)
                     }
-                }
-                
-                if mapViewController == nil {
-                    print("There is no map view controller")
-                } else {
-                    print("There is a map view controller")
                 }
                 
                 decisionHandler(.cancel)

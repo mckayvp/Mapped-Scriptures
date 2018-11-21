@@ -110,7 +110,7 @@ class MapViewController : UIViewController, MKMapViewDelegate {
     
             mapView.setRegion(viewRegion, animated: true)
     
-            mapView.showAnnotations(mapView.annotations, animated: true) //Show all annotations from viewDidLoad in rectangular view
+            mapView.showAnnotations(mapView.annotations, animated: true) 
         }
     }
     
